@@ -2,7 +2,7 @@
 
 (function() {
 
-    var edit_AccountController =  function(accountService, $log, $stateParams) {
+    var edit_AccountController =  function(accountService, $log, $stateParams, $state) {
     
     	$log.log("edit_AccountController controller created");
     	var vm = this; 
@@ -20,8 +20,9 @@
         	var jsonAccount = {firstName:vm.firstName, secondName:vm.lastName, accountNumber:vm.accountNumber, id:vm.id};  
         	$log.log("editAccount: Json String = " + jsonAccount)
         	accountService.editAccount(jsonAccount);
+        	$state.go('account')
         }
      };
 
-    angular.module('accountApp').controller('edit_accountController', ['accountService','$log', '$stateParams', edit_AccountController]);
+    angular.module('accountApp').controller('edit_accountController', ['accountService','$log', '$stateParams', '$state', edit_AccountController]);
 }());

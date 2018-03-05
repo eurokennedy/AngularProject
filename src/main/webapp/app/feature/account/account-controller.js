@@ -19,12 +19,8 @@
         
         vm.deleteAccount = function(account) {
         	$log.log("account-controller: vm.deleteAccount")
-            accountService.deleteAccount(account).then(function (results) {
-            $log.log(results);
-            }, function (error) {
-                vm.error = true;
-                vm.errorMessage = error;        	
-        	});        
+            accountService.deleteAccount(account);
+        	init();
         }
         
         vm.goToUpdate = function(firstName,lastName,accountNumber,id) {
