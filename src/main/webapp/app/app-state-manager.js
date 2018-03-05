@@ -11,9 +11,9 @@
         }).state("account", {
                 url: "/account",
                 templateUrl: "app/feature/account/account.html"
-        }).state("add_edit_account", {
-                url: "/add_edit_account",
-                templateUrl: "app/feature/account/add_edit_account.html"
+        }).state("add_account", {
+                url: "/add_account",
+                templateUrl: "app/feature/account/add_account.html"
         }).state("edit_account", {
 	            url: "/edit_account",
 	            params: {firstName:null, secondName:null, accountNumber:null, id:null},

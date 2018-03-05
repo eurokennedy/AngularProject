@@ -2,9 +2,9 @@
 
 (function() {
 
-    var add_edit_AccountController =  function(accountService, $log) {
+    var add_AccountController =  function(accountService, $log) {
     
-    	$log.log("add_edit_AccountController controller created");
+    	$log.log("add_AccountController controller created");
     	var vm = this; 
     	vm.firstName = "";
     	vm.lastName = "";
@@ -24,5 +24,5 @@
             
     };
 
-    angular.module('accountApp').controller('add_edit_accountController', ['accountService','$log', add_edit_AccountController]);
+    angular.module('accountApp').controller('add_accountController', ['accountService','$log', add_AccountController]);
 }());
